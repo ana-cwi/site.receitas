@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Receitas Saborosas</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="header-top">
+        <h1>Receitas Saborosas</h1>
+        <div class="user-controls">
+          <button id="login-btn" title="Login">🔑 Entrar</button>
+          <div id="user-info" class="hidden">
+            <span id="user-name"></span> | Pontos: <span id="user-points">0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="filters">
+        <input type="text" id="search" placeholder="Buscar por nome ou ingrediente" />
+        <select id="tempo">
+          <option value="">Tempo de preparo</option>
+          <option value="30">Até 30 min</option>
+          <option value="60">Até 1h</option>
+          <option value="999">Mais de 1h</option>
+        </select>
+        <select id="facilidade">
+          <option value="">Facilidade</option>
+          <option value="fácil">Fácil</option>
+          <option value="média">Média</option>
+          <option value="trabalhosa">Trabalhosa</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="salgadas">
+      <h2>Receitas Salgadas</h2>
+      <div class="recipes-list"></div>
+    </section>
+
+    <section id="doces">
+      <h2>Receitas Doces</h2>
+      <div class="recipes-list"></div>
+    </section>
+  </main>
+
+  <!-- Modal de login -->
+  <div id="login-modal">
+    <div class="modal-content">
+      <h3>Entrar</h3>
+      <div id="error-msg">Insira um nome válido.</div>
+      <label for="login-name">Nome:</label>
+      <input type="text" id="login-name" />
+      <button id="login-submit-btn">Entrar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
